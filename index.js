@@ -31,14 +31,12 @@ const observer = new IntersectionObserver(entries => {
     // Loop over the entries
     entries.forEach(entry => {
         // If the element is visible
-		if (entry.isIntersecting) {
+        if (entry.isIntersecting) {
 			
             // Add the animation class
             entry.target.classList.add('scroll');
-           return;// if we added the class, exit the function
-        }
-            // We're not intersecting, so remove the class!
-        entry.target.classList.remove('scroll')
+            return;// if we added the class, exit the function
+        } 
     })
 });
 
