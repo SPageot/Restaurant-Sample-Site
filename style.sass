@@ -1,0 +1,207 @@
+@import './sass/_variables'
+@import './sass/_mixins'
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap')
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Zen Antique Soft', serif
+    background-color: $main-color
+    overflow-x: hidden
+
+.header__nav
+    @include positioning(flex , row , flex-start , center )
+    height:70px
+    background-color: $secondary-color
+    h4
+        margin-left: 5%
+    
+
+.main__section
+    @include backgroundImage("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" ,cover ,center)
+    height: 850px
+    position: relative
+    box-shadow: 0px 10px 10px $secondary-color
+    .main__section--headline
+        font-size: 1.4rem
+        width: 20%
+        position: absolute
+        left: 300px
+        top: 20px
+        background: rgba(207,183 ,132 ,0.9)
+        border-radius: 25px
+        padding: 3%
+.main__section--about
+    @include positioning(flex , row , space-evenly , center )
+    margin-top: 70px
+    background: rgba(207,183 ,132 ,0.9)
+    padding: 100px
+    box-shadow: 0px 0px 10px $secondary-color
+    img
+        height: 400px
+        border-radius: 25px
+    .main__section--about_info
+        width: 50%
+.main__section--about_cont
+    @include backgroundImage("https://images.dailyhive.com/20200127165207/shutterstock_761494024.jpg",cover ,center)
+    @include positioning(flex, row , center , center )
+    height: 700px
+    box-shadow: 0px 10px 20px $secondary-color
+    & > h2
+        width: 30%
+        padding: 30px
+        background: rgba(207,183 ,132 ,0.8)
+.main__section--menu
+    @include backgroundImage("https://cdnimg.webstaurantstore.com/uploads/buying_guide/2019/9/1456431.jpg",cover ,center)
+    @include positioning(flex, column , center , center )
+    margin:100px 0px
+    box-shadow: 0px 0px 10px black
+    position: relative
+    padding:100px
+    font:
+        family: 'Zen Old Mincho', serif
+        size: 0.8rem
+    h2
+       background-color: rgba(255,255 ,255 ,0.6 )
+    p
+        font-size: 1.2rem
+        color: white
+    .main__section--menu_food
+         height:400px
+    #main__section--menu_food
+        display: none
+        position: relative
+        .main__section--menu_food_front
+            @include backgroundImage("https://image.freepik.com/free-vector/elegant-menu-cover-design_1048-9224.jpg",cover ,center)
+            h2
+                position: absolute
+                right:0
+                top:0 
+        .main__section--menu_food_intro
+            @include backgroundImage("https://cdn.imenupro.com/img/menus96/respira-steakhouse-menu.png",contain ,center)
+            @include positioning(flex, column , flex-end , center )
+            h2
+                position: absolute
+                left:0
+                top:0
+        .main__section--menu_food_1
+            @include backgroundImage("https://cdn.imenupro.com/img/menus96/respira-steakhouse-menu.png",contain ,center)
+            @include positioning(flex, column , flex-end , center )
+            h2
+                position: absolute
+                right:0
+                top:0
+        .main__section--menu_food_2
+            @include backgroundImage("https://cdn.imenupro.com/img/menus96/respira-steakhouse-menu.png",contain ,center)
+            @include positioning(flex, column , flex-end , center )
+            h2
+                position: absolute
+                left:0
+                top:0
+        .main__section--menu_food_3
+            @include backgroundImage("https://cdn.imenupro.com/img/menus96/respira-steakhouse-menu.png",contain ,center)
+            @include positioning(flex, column , flex-end , center )
+            h2
+                position: absolute
+                right:0
+                top:0
+        .main__section--menu_food_4
+            @include backgroundImage("https://cdn.imenupro.com/img/menus96/respira-steakhouse-menu.png",contain ,center)
+            @include positioning(flex, column , flex-end , center )
+            h2
+                position: absolute
+                left:0
+                top:0
+.footer
+    background-color: $secondary-color
+    height:100px
+    @include positioning(flex, row , center , center)
+@media screen and (max-width: 1468px)
+   
+       
+        
+    .main__section
+        @include positioning(flex, row , center , flex-end )
+        height: 400px
+        .main__section--headline
+            position: static
+            font-size: 0.9rem
+            width: 100%
+            border-radius: 0px
+            height: 35%
+    .main__section--about
+        @include positioning(flex , row , space-evenly , center )
+        img
+            height: 250px
+            min-width: 30vw
+            margin-bottom: 50px
+        .main__section--about_info
+            min-width: 400px
+    .main__section--about_cont
+        height: 250px
+        & > h2
+            font-size: 1rem
+            width: 500px
+            max-width: 60%
+   
+
+
+@media screen and (max-width: 960px)
+    .main
+        .main__section--headline
+            width:100vw
+        .main__section--about
+            @include positioning(flex , column, space-evenly , center )
+            img
+                height: 200px
+            .main__section--about_info
+                min-width: 300px
+        .main__section--menu
+            border: none
+            @include positioning(flex, column , center , center )
+            padding:20px
+            font-size: 0.9rem
+            img
+                display: none
+            #main__section--menu_food
+                display: block
+
+@media screen and (max-width: 300px)
+    .main
+        .main__section--headline
+            font-size: 0.8rem
+            width:100vw
+        .main__section--about
+            @include positioning(flex , column, space-evenly , center )
+            img
+                height: 150px
+            .main__section--about_info
+                min-width: 200px
+        .main__section--menu
+            border: none
+            @include positioning(flex, column , center , center )
+            padding:20px
+            font-size: 0.9rem
+            img
+                display: none
+            #main__section--menu_food
+                display: block
+
+@keyframes inView 
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+  
+
+
+@media (prefers-reduced-motion: no-preference) 
+  .scroll 
+    animation: inView 2s 1
+    opacity: 1
+  
+
