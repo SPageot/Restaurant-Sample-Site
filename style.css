@@ -99,13 +99,11 @@ body {
 }
 .main__section--menu h2 {
   background-color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8;
 }
 .main__section--menu p {
   font-size: 1.2rem;
   color: white;
-}
-.main__section--menu .main__section--menu_food {
-  height: 400px;
 }
 .main__section--menu #main__section--menu_food {
   display: none;
@@ -271,6 +269,10 @@ body {
   }
   .main .main__section--menu #main__section--menu_food {
     display: block;
+  }
+  .main .main__section--menu #main__section--menu_food h2 {
+    font-size: 0.7rem;
+    width: 50px;
   }
 }
 @media screen and (max-width: 300px) {
