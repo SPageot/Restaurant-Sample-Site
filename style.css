@@ -21,6 +21,7 @@ body {
   background-color: #CFB784;
 }
 .header__nav h4 {
+  opacity: 0;
   margin-left: 5%;
 }
 
@@ -33,6 +34,7 @@ body {
   box-shadow: 0px 10px 10px #CFB784;
 }
 .main__section .main__section--headline {
+  opacity: 0;
   font-size: 1.4rem;
   width: 20%;
   position: absolute;
@@ -58,6 +60,7 @@ body {
   border-radius: 25px;
 }
 .main__section--about .main__section--about_info {
+  opacity: 0;
   width: 50%;
 }
 
@@ -73,6 +76,7 @@ body {
   box-shadow: 0px 10px 20px #CFB784;
 }
 .main__section--about_cont > h2 {
+  opacity: 0;
   width: 30%;
   padding: 30px;
   background: rgba(207, 183, 132, 0.8);
@@ -310,10 +314,9 @@ body {
     opacity: 1;
   }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .scroll {
-    animation: inView 1s;
-  }
+body .scroll {
+  animation: inView 1s;
+  opacity: 1 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
