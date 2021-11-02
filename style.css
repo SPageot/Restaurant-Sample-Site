@@ -262,7 +262,7 @@ body {
     align-items: center;
     padding: 20px;
     font-size: 0.9rem;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .main .main__section--menu img {
     display: none;
