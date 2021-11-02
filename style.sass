@@ -11,7 +11,7 @@
 body
     font-family: 'Zen Antique Soft', serif
     background-color: $main-color
-    overflow-x: hidden
+    
 
 .header__nav
     @include positioning(flex , row , flex-start , center )
@@ -168,6 +168,7 @@ body
             @include positioning(flex, column , center , center )
             padding:20px
             font-size: 0.9rem
+            overflow-x: hidden
             img
                 display: none
             #main__section--menu_food
@@ -192,8 +193,6 @@ body
             @include positioning(flex, column , center , center )
             padding:20px
             font-size: 0.9rem
-            img
-                display: none
             #main__section--menu_food
                 display: block
 

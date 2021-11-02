@@ -9,7 +9,6 @@
 body {
   font-family: "Zen Antique Soft", serif;
   background-color: #EADEB8;
-  overflow-x: hidden;
 }
 
 .header__nav {
@@ -263,6 +262,7 @@ body {
     align-items: center;
     padding: 20px;
     font-size: 0.9rem;
+    overflow-x: hidden;
   }
   .main .main__section--menu img {
     display: none;
@@ -300,9 +300,6 @@ body {
     align-items: center;
     padding: 20px;
     font-size: 0.9rem;
-  }
-  .main .main__section--menu img {
-    display: none;
   }
   .main .main__section--menu #main__section--menu_food {
     display: block;
